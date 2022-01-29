@@ -14,7 +14,6 @@ dataSources:
       apiVersion: 0.0.5
       language: wasm/assemblyscript
       entities:
-        - Approval
         - ApprovalForAll
         - Log
         - OwnershipTransferred
@@ -26,8 +25,6 @@ dataSources:
         - name: Groupies
           file: ./abis/Groupies.json
       eventHandlers:
-        - event: Approval(indexed address,indexed address,indexed uint256)
-          handler: handleApproval
         - event: ApprovalForAll(indexed address,indexed address,bool)
           handler: handleApprovalForAll
         - event: Log(indexed address,uint256,uint256,uint256,uint256,uint256)
